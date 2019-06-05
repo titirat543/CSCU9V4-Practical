@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*
+ * 
+ */
+int main(int argc, char** argv) {
+    
+        int n[3] ,i;
+        printf("Enter a three-digit number: ");
+        for(int x =0;x<3;x++){
+        
+        scanf("%1d",&n[x]);
+        }
+        
+        for(int i = 2;i>=0;i--){
+        
+            int digit = n[i];
+            printf("%d",digit);
+        }
+
+    return (EXIT_SUCCESS);
+}
+
