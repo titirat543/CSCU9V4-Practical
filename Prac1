@@ -1,0 +1,70 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*
+ * 
+ */
+int main() {
+
+ 
+int a[11],i;
+     
+     
+      
+ 
+printf("Enter the 11-digit UPC code:\n");
+for(i=0;i<=11;i++)
+scanf ("%1d", &a[i]);
+
+ 
+
+int totalodd = 0,Multiple_odd,loop;
+
+for(loop = 0 ; loop <= 10;loop=loop+2)
+{
+    
+    totalodd = totalodd +a[loop];
+    
+}
+
+printf("Add the odd number digits: %d \n",totalodd);
+
+Multiple_odd=totalodd*3;
+printf("Multiply the result by 3 : %d\n",Multiple_odd);
+
+int totaleven =0;
+for(i = 1 ; i <= 10;i=i+2)
+{
+    
+    totaleven = totaleven +a[i];
+    
+}
+printf("Add the even number digits: %d\n",totaleven);
+
+int Tworesult= Multiple_odd + totaleven;
+
+printf("Add the two results together: %d\n",Tworesult);
+
+
+int reminder = Tworesult % 10;
+int check_digit = 10 - reminder;
+
+printf("The check digit is: %d \n",check_digit);
+
+int last_digits = a[11];
+printf("The last_digits is: %d \n",last_digits);
+
+if(check_digit == last_digits)
+{
+  printf("code is valid. \n");
+}else{
+    printf("code is not  valid. \n");
+}
+
+
+
+
+ 
+return 0;
+
+}
